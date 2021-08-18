@@ -92,8 +92,8 @@ section {
   font-weight: 700;
   text-align: left;
   text-transform: uppercase;
-  -webkit-animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  -webkit-animation: text-clip 1.8s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: text-clip 1.8s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
   -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
           filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
@@ -151,6 +151,19 @@ section {
           transform: translate(-50%, -50%);
 }
 
+.header__textbox .name {
+  font-family: "Lato";
+  font-size: 6rem;
+  color: yellowgreen;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.header__textbox h2 {
+  font-family: "roboto";
+  font-size: 3rem;
+}
+
 .header__textbox--sub {
   font-family: "open-sans";
   font-size: 1.7rem;
@@ -164,19 +177,6 @@ section {
   text-align: center;
   padding: 0.5rem;
   font-size: 1.5rem;
-}
-
-.header__textbox--sub .name {
-  font-family: "Lato";
-  font-size: 6rem;
-  color: yellowgreen;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.header__textbox--sub h2 {
-  font-family: "roboto";
-  font-size: 3rem;
 }
 
 .header .menu {
@@ -216,8 +216,8 @@ section {
 @-webkit-keyframes moveinBottom {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
   100% {
     opacity: 1;
@@ -229,8 +229,8 @@ section {
 @keyframes moveinBottom {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
+    -webkit-transform: translateY(3rem);
+            transform: translateY(3rem);
   }
   100% {
     opacity: 1;

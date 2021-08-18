@@ -78,6 +78,12 @@ gsap.fromTo(
   { duration: 0.5, delay: 1.7, opacity: 1, yPercent: -55 }
 );
 
+gsap.fromTo(
+  ".header__textbox--sub",
+  { yPercent: 40, opacity: 0 },
+  { duration: 0.5, delay: 2.2, opacity: 1, yPercent: 0 }
+);
+
 ////////////////////////////#Gsap png float animation
 
 const randomX = random(1, 10);
