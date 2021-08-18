@@ -94,6 +94,8 @@ section {
   text-transform: uppercase;
   -webkit-animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
           animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 .header__main h1 {
@@ -137,6 +139,8 @@ section {
 .header-clipped .can > img {
   width: 100px;
   height: auto;
+  -webkit-filter: drop-shadow(-1px 10px 4px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-1px 10px 4px rgba(50, 50, 0, 0.5));
 }
 
 .header__textbox {
