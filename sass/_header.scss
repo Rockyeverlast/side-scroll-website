@@ -1,0 +1,98 @@
+.header {
+  position: relative;
+  height: 100vh;
+  background-color: greenyellow;
+
+  &__main {
+    position: absolute;
+    right: 55%;
+    top: 25%;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+
+    h1 {
+      font-family: "montserrat";
+      // width: max-content;
+      font-size: 7rem;
+    }
+
+    .that {
+      display: block;
+      color: white;
+      font-size: 3rem;
+      padding-left: 20rem;
+      margin: 4rem 4rem;
+    }
+  }
+
+  &-clipped {
+    position: absolute;
+    width: 60%;
+    height: inherit;
+    background-color: white;
+    left: 40%;
+
+    -webkit-clip-path: polygon(63% 0, 100% 0, 100% 100%, 5% 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 5% 100%);
+    transform-origin: right;
+
+    .can-wrapper {
+      position: absolute;
+      display: flex;
+      top: 30%;
+      left: 30%;
+    }
+    .can {
+      margin-right: 30px;
+    }
+    .can > img {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  &__textbox {
+    position: absolute;
+    top: 65%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+    &--sub {
+      font-family: "open-sans";
+      font-size: 1.7rem;
+      font-weight: 500;
+      // padding: 2rem;
+      text-align: left;
+
+      .know-more {
+        background-color: yellowgreen;
+        margin-top: 2rem;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .name {
+        font-family: "Lato";
+        font-size: 6rem;
+        color: yellowgreen;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      h2 {
+        font-family: "roboto";
+        // width: max-content;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .menu {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #fff;
+  }
+}

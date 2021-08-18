@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+} //1rem=10px
+
+body {
+  font-family: "montserrat", "poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 600%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+section {
+  width: 99vw;
+  height: 100vh;
+}

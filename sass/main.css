@@ -1,0 +1,237 @@
+.navigation {
+  position: fixed;
+  width: 17rem;
+  left: -24rem;
+  height: 100%;
+  text-align: center;
+  background-color: #1e1e1e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 6;
+}
+
+.navigation__menu {
+  margin-top: 5rem;
+}
+
+.navigation .closebtn {
+  font-size: 3.6rem;
+}
+
+.navigation a {
+  color: white;
+  font-size: 2rem;
+}
+
+.navigation :hover {
+  color: #eb2f64;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+  margin-top: 5rem;
+  display: block;
+}
+
+.menu-bar {
+  position: absolute;
+  color: #1e1e1e;
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  z-index: 4;
+  padding: 3rem 0 0 2rem;
+  font-size: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "montserrat", "poppins";
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 600%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+section {
+  width: 99vw;
+  height: 100vh;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-color: greenyellow;
+}
+
+.header__main {
+  position: absolute;
+  right: 55%;
+  top: 25%;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  -webkit-animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.header__main h1 {
+  font-family: "montserrat";
+  font-size: 7rem;
+}
+
+.header__main .that {
+  display: block;
+  color: white;
+  font-size: 3rem;
+  padding-left: 20rem;
+  margin: 4rem 4rem;
+}
+
+.header-clipped {
+  position: absolute;
+  width: 60%;
+  height: inherit;
+  background-color: white;
+  left: 40%;
+  -webkit-clip-path: polygon(63% 0, 100% 0, 100% 100%, 5% 100%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 5% 100%);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.header-clipped .can-wrapper {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 30%;
+  left: 30%;
+}
+
+.header-clipped .can {
+  margin-right: 30px;
+}
+
+.header-clipped .can > img {
+  width: 100px;
+  height: auto;
+}
+
+.header__textbox {
+  position: absolute;
+  top: 65%;
+  left: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header__textbox--sub {
+  font-family: "open-sans";
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.header__textbox--sub .know-more {
+  background-color: yellowgreen;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.header__textbox--sub .name {
+  font-family: "Lato";
+  font-size: 6rem;
+  color: yellowgreen;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.header__textbox--sub h2 {
+  font-family: "roboto";
+  font-size: 3rem;
+}
+
+.header .menu {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.skill {
+  position: relative;
+  height: 100vh;
+  background: turquoise;
+}
+
+@-webkit-keyframes text-clip {
+  from {
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes text-clip {
+  from {
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@-webkit-keyframes moveinBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveinBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0rem);
+            transform: translateY(0rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */
