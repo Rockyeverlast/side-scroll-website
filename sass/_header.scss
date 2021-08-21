@@ -10,7 +10,7 @@
     font-weight: 700;
     text-align: left;
     text-transform: uppercase;
-    animation: text-clip 1.8s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+    animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 
     h1 {
@@ -61,20 +61,6 @@
     left: 55%;
     transform: translate(-50%, -50%);
 
-    .name {
-      font-family: "Lato";
-      font-size: 6rem;
-      color: yellowgreen;
-      font-weight: 600;
-      text-decoration: underline;
-    }
-
-    h2 {
-      font-family: "roboto";
-      // width: max-content;
-      font-size: 3rem;
-    }
-
     &--sub {
       font-family: "open-sans";
       font-size: 1.7rem;
@@ -88,6 +74,20 @@
         text-align: center;
         padding: 0.5rem;
         font-size: 1.5rem;
+      }
+
+      .name {
+        font-family: "Lato";
+        font-size: 6rem;
+        color: yellowgreen;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      h2 {
+        font-family: "roboto";
+        // width: max-content;
+        font-size: 3rem;
       }
     }
   }
