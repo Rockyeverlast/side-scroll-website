@@ -41,8 +41,10 @@ li {
   /* Stay at the top */
   left: 0;
   z-index: 4;
-  padding: 3rem 0 0 2rem;
-  font-size: 4rem;
+  margin-left: 2rem;
+  font-size: 5rem;
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 * {
@@ -82,43 +84,41 @@ section {
 .header {
   position: relative;
   height: 100vh;
-  background-color: greenyellow;
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
 }
 
 .header__main {
   position: absolute;
-  right: 55%;
-  top: 25%;
-  font-weight: 700;
-  text-align: left;
-  text-transform: uppercase;
-  -webkit-animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
-          animation: text-clip 2s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  right: 43%;
+  top: 10%;
+  color: #fff;
+  text-align: center;
   -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
           filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
 
 .header__main h1 {
-  font-family: "montserrat";
-  font-size: 7rem;
+  font-family: "raleway";
+  font-weight: 700;
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  -webkit-animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+          animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
-.header__main .that {
-  display: block;
-  color: white;
-  font-size: 3rem;
-  padding-left: 20rem;
-  margin: 4rem 4rem;
+.header__main .png {
+  width: 40em;
 }
 
 .header-clipped {
   position: absolute;
   width: 60%;
   height: inherit;
-  background-color: white;
+  background-image: url(../images/hero2.jpg);
   left: 40%;
-  -webkit-clip-path: polygon(63% 0, 100% 0, 100% 100%, 5% 100%);
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 5% 100%);
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%);
   -webkit-transform-origin: right;
           transform-origin: right;
 }
@@ -128,7 +128,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 30%;
+  top: 25%;
   left: 30%;
 }
 
@@ -137,7 +137,7 @@ section {
 }
 
 .header-clipped .can > img {
-  width: 100px;
+  width: 120px;
   height: auto;
   -webkit-filter: drop-shadow(-1px 10px 4px rgba(50, 50, 0, 0.5));
           filter: drop-shadow(-1px 10px 4px rgba(50, 50, 0, 0.5));
@@ -145,17 +145,35 @@ section {
 
 .header__textbox {
   position: absolute;
-  top: 65%;
-  left: 55%;
+  top: 80%;
+  left: 60%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
+.header__textbox h2 {
+  font-family: "rubik";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.header__textbox .name {
+  font-family: "roboto";
+  font-size: 8rem;
+  color: #803dcc;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .header__textbox--sub {
-  font-family: "open-sans";
-  font-size: 1.7rem;
-  font-weight: 500;
+  font-family: "ubuntu";
+  font-size: 1.5rem;
+  font-weight: 400;
   text-align: left;
+  margin-top: 1rem;
 }
 
 .header__textbox--sub .know-more {
@@ -166,21 +184,7 @@ section {
   font-size: 1.5rem;
 }
 
-.header__textbox--sub .name {
-  font-family: "Lato";
-  font-size: 6rem;
-  color: yellowgreen;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-.header__textbox--sub h2 {
-  font-family: "roboto";
-  font-size: 3rem;
-}
-
 .header .menu {
-  font-size: 3rem;
   cursor: pointer;
   color: #fff;
 }
@@ -213,29 +217,33 @@ section {
   }
 }
 
-@-webkit-keyframes moveinBottom {
+@-webkit-keyframes moveinRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
+    -webkit-transform: translate(10rem);
+            transform: translate(10rem);
+  }
+  80% {
+    -webkit-transform: translate(-1rem);
+            transform: translate(-1rem);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    opacity: 100%;
   }
 }
 
-@keyframes moveinBottom {
+@keyframes moveinRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
+    -webkit-transform: translate(10rem);
+            transform: translate(10rem);
+  }
+  80% {
+    -webkit-transform: translate(-1rem);
+            transform: translate(-1rem);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    opacity: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

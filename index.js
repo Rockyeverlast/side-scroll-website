@@ -63,19 +63,21 @@ document.querySelector(".closebtn").addEventListener("click", function (e) {
 gsap.fromTo(
   ".header-clipped",
   { scaleX: 0 },
-  { duration: 0.5, scaleX: 1, delay: 1 }
+  { duration: 0.5, scaleX: 1, delay: 1.1 }
 );
 
-// gsap.fromTo(
-//   ".header__main",
-//   { x: -500, opacity: 0 },
-//   { duration: 1, x: 0, opacity: 1 }
-// );
+gsap.from(".png", { x: -400 });
 
 gsap.fromTo(
   ".header__textbox",
   { yPercent: 40, opacity: 0 },
-  { duration: 0.5, delay: 1.7, opacity: 1, yPercent: -55 }
+  { duration: 0.5, delay: 1.5, opacity: 1, yPercent: -55 }
+);
+
+gsap.fromTo(
+  ".header__textbox--sub",
+  { yPercent: 40, opacity: 0 },
+  { duration: 0.5, delay: 2.2, opacity: 1, yPercent: 5 }
 );
 
 ////////////////////////////#Gsap png float animation
@@ -132,16 +134,3 @@ function random(min, max) {
   const delta = max - min;
   return (direction = 1) => (min + delta * Math.random()) * direction;
 }
-
-////////////////////////////#Header Hello and name animation
-
-var tl = (tl = gsap.timeline({ repeat: 0 }));
-
-tl.from("#line", { scaleX: 0, transformOrigin: "left center" });
-tl.from("#upper", { duration: 0.75, y: 30 }, "text", { opacity: 0 });
-tl.from("#lower", { duration: 0.75, y: -30 }, "text");
-tl.to(
-  "#line, #upper, #lower",
-  { duration: 1, opacity: 1, ease: "none" },
-  "+=2"
-);

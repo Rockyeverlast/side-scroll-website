@@ -39,6 +39,7 @@ li {
   top: 0; /* Stay at the top */
   left: 0;
   z-index: 4;
-  padding: 3rem 0 0 2rem;
-  font-size: 4rem;
+  margin-left: 2rem;
+  font-size: 5rem;
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
