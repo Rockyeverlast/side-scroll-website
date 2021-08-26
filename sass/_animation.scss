@@ -21,3 +21,27 @@
     opacity: 100%;
   }
 }
+
+@keyframes moveinleft {
+  0% {
+    opacity: 0;
+    transform: translate(-10rem);
+  }
+
+  80% {
+    transform: translate(1rem);
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

@@ -1,50 +1,43 @@
 .header {
   position: relative;
   height: 100vh;
-  background-image: url(../images/hero.jpg);
-  background-size: cover;
+  background-color: #000;
 
   &__main {
     position: absolute;
-    right: 43%; //45%
-    top: 10%; //15
-    color: #fff;
-    text-align: center;
+    right: 48%; //45%
+    top: 15%; //15
+    width: min-content;
+    text-align: left;
+    overflow: hidden;
 
     // text-transform: uppercase;
-
-    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
-
     h1 {
-      font-family: "raleway";
+      font-family: "raleway", sans-serif;
       font-weight: 700;
-      // width: max-content;
-      font-size: 5rem;
-      letter-spacing: 1rem;
-      animation: text-clip 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-    }
+      color: #fff;
+      font-size: 10rem;
 
-    .png {
-      width: 40em;
+      animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) both;
+      // animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
     }
   }
 
   &-clipped {
     position: absolute;
     width: 60%;
-    height: inherit;
-    background-image: url(../images/hero2.jpg);
     left: 40%;
+    height: inherit;
+    background-color: #fff;
+    transform-origin: right;
 
     -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%);
 
-    transform-origin: right;
-
     .can-wrapper {
       position: absolute;
       display: flex;
-      top: 25%;
+      top: 65%;
       left: 30%;
     }
     .can {
@@ -59,29 +52,35 @@
 
   &__textbox {
     position: absolute;
-    top: 80%;
-    left: 60%;
+    top: 40%;
+    left: 63%;
     transform: translate(-50%, -50%);
 
     h2 {
       font-family: "rubik";
       width: max-content;
-      font-size: 4rem;
+      font-size: 5rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-family: "quicksand";
       font-weight: 400;
+      font-size: 4rem;
     }
 
     .name {
       font-family: "roboto";
-      font-size: 8rem;
+      font-size: 6rem;
       color: rgb(128, 61, 204);
       font-weight: 600;
       text-decoration: underline;
     }
 
     &--sub {
-      font-family: "ubuntu";
+      font-family: "lato";
       font-size: 1.5rem;
-      font-weight: 400;
+      font-weight: 500;
       // padding: 2rem;
       text-align: left;
       margin-top: 1rem;

@@ -66,19 +66,48 @@ gsap.fromTo(
   { duration: 0.5, scaleX: 1, delay: 1.1 }
 );
 
-gsap.from(".png", { x: -400 });
+// gsap.fromTo(
+//   "h2",
+//   { scaleX: -200, opacity: 0 },
+//   { duration: 1, scaleX: 1, delay: 1.5, x: 0, opacity: 1 }
+// );
 
+//# png float appear effect
 gsap.fromTo(
-  ".header__textbox",
-  { yPercent: 40, opacity: 0 },
-  { duration: 0.5, delay: 1.5, opacity: 1, yPercent: -55 }
+  ".html",
+  { yPercent: 50, opacity: 0 },
+  { duration: 0.5, delay: 1.5, opacity: 1, yPercent: -10 }
 );
 
 gsap.fromTo(
-  ".header__textbox--sub",
-  { yPercent: 40, opacity: 0 },
-  { duration: 0.5, delay: 2.2, opacity: 1, yPercent: 5 }
+  ".css",
+  { yPercent: 50, opacity: 0 },
+  { duration: 0.5, delay: 2, opacity: 1, yPercent: -10 }
 );
+
+gsap.fromTo(
+  ".js",
+  { yPercent: 50, opacity: 0 },
+  { duration: 0.5, delay: 2.5, opacity: 1, yPercent: -10 }
+);
+
+gsap.fromTo(
+  ".sass",
+  { yPercent: 50, opacity: 0 },
+  { duration: 0.5, delay: 3, opacity: 1, yPercent: -10 }
+);
+
+// gsap.fromTo(
+//   ".header__textbox",
+//   { yPercent: 40, opacity: 0 },
+//   { duration: 0.5, delay: 1.5, opacity: 1, yPercent: -55 }
+// );
+
+// gsap.fromTo(
+//   ".header__textbox--sub",
+//   { yPercent: 40, opacity: 0 },
+//   { duration: 0.5, delay: 2.2, opacity: 1, yPercent: 5 }
+// );
 
 ////////////////////////////#Gsap png float animation
 
@@ -134,3 +163,5 @@ function random(min, max) {
   const delta = max - min;
   return (direction = 1) => (min + delta * Math.random()) * direction;
 }
+
+//# page Bg color transition.
