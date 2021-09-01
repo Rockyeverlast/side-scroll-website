@@ -15,8 +15,24 @@
     h1 {
       font-family: "raleway", sans-serif;
       font-weight: 700;
-      color: #fff;
-      font-size: 10rem;
+      // color: #fff;
+      font-size: 9.5rem;
+
+      // background-color: #f3ec78;
+      // background-image: linear-gradient(45deg, #f3ec78, #af4261);
+      background-image: linear-gradient(
+        to right,
+        #151ef0,
+        #fa0095,
+        #ff002f,
+        #fa9e00,
+        #a8eb12
+      );
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
 
       animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) both;
       // animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
@@ -25,7 +41,7 @@
 
   &-clipped {
     position: absolute;
-    width: 60%;
+    width: 61%;
     left: 40%;
     height: inherit;
     background-color: #fff;
@@ -61,24 +77,25 @@
       width: max-content;
       font-size: 5rem;
       font-weight: 500;
+      text-decoration: underline;
     }
 
     h3 {
-      font-family: "quicksand";
-      font-weight: 400;
+      font-family: "rubik";
+      font-weight: 500;
       font-size: 4rem;
     }
 
     .name {
       font-family: "roboto";
       font-size: 6rem;
-      color: rgb(128, 61, 204);
+      color: #151ef0;
       font-weight: 600;
       text-decoration: underline;
     }
 
     &--sub {
-      font-family: "lato";
+      font-family: "quicksand";
       font-size: 1.5rem;
       font-weight: 500;
       // padding: 2rem;

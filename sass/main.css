@@ -77,7 +77,7 @@ body {
 }
 
 section {
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -101,15 +101,21 @@ section {
 .header__main h1 {
   font-family: "raleway", sans-serif;
   font-weight: 700;
-  color: #fff;
-  font-size: 10rem;
+  font-size: 9.5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#151ef0), color-stop(#fa0095), color-stop(#ff002f), color-stop(#fa9e00), to(#a8eb12));
+  background-image: linear-gradient(to right, #151ef0, #fa0095, #ff002f, #fa9e00, #a8eb12);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   -webkit-animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) both;
           animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) both;
 }
 
 .header-clipped {
   position: absolute;
-  width: 60%;
+  width: 61%;
   left: 40%;
   height: inherit;
   background-color: #fff;
@@ -154,24 +160,25 @@ section {
   width: max-content;
   font-size: 5rem;
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .header__textbox h3 {
-  font-family: "quicksand";
-  font-weight: 400;
+  font-family: "rubik";
+  font-weight: 500;
   font-size: 4rem;
 }
 
 .header__textbox .name {
   font-family: "roboto";
   font-size: 6rem;
-  color: #803dcc;
+  color: #151ef0;
   font-weight: 600;
   text-decoration: underline;
 }
 
 .header__textbox--sub {
-  font-family: "lato";
+  font-family: "quicksand";
   font-size: 1.5rem;
   font-weight: 500;
   text-align: left;
@@ -191,10 +198,129 @@ section {
   color: #fff;
 }
 
-.skill {
+.project {
   position: relative;
   height: 100vh;
-  background: turquoise;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transition: background-color 1s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+}
+
+.project .card {
+  max-width: 35ch;
+  padding: clamp(1.5rem, 20vh, 10rem) 0 0;
+  background-color: crimson;
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.9);
+          box-shadow: rgba(0, 0, 0, 0.9);
+  -webkit-transition: -webkit-transform ease 250ms;
+  transition: -webkit-transform ease 250ms;
+  transition: transform ease 250ms;
+  transition: transform ease 250ms, -webkit-transform ease 250ms;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  margin-right: 4rem;
+}
+
+.project .card-body {
+  padding: 2rem;
+  -webkit-transform: translateY(65%);
+          transform: translateY(65%);
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: -webkit-transform 400ms ease;
+  transition: transform 400ms ease;
+  transition: transform 400ms ease, -webkit-transform 400ms ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(15%, rgba(0, 0, 0, 0.25)), to(black));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25) 15%, black);
+}
+
+.project .card-body p {
+  color: rgba(255, 255, 255, 0.76);
+  margin-bottom: 1.25em;
+  margin-top: 0.5em;
+}
+
+.project .card-body > *:not(.card-title) {
+  opacity: 0;
+  -webkit-transition: opacity 1200ms linear 200ms;
+  transition: opacity 1200ms linear 200ms;
+}
+
+.project .card-body .button {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background: #42f584;
+  padding: 0.5em 1.25em;
+  border-radius: 0.25rem;
+}
+
+.project .card-body .button:hover {
+  background: white;
+}
+
+.project .card-title {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.project .card-title::after {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 100%;
+  height: 3px;
+  width: calc(100% + 1.5rem);
+  background: #42f584;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.project .card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.project .card:hover .card-body > *:not(.card-title) {
+  opacity: 1;
+}
+
+.project .card:hover .card-body {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+.project .card:hover .card-title::after {
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 @-webkit-keyframes text-clip {

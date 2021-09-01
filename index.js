@@ -88,13 +88,13 @@ gsap.fromTo(
 gsap.fromTo(
   ".js",
   { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 2.5, opacity: 1, yPercent: -10 }
+  { duration: 0.5, delay: 2.4, opacity: 1, yPercent: -10 }
 );
 
 gsap.fromTo(
   ".sass",
   { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 3, opacity: 1, yPercent: -10 }
+  { duration: 0.5, delay: 2.8, opacity: 1, yPercent: -10 }
 );
 
 // gsap.fromTo(
@@ -165,3 +165,21 @@ function random(min, max) {
 }
 
 //# page Bg color transition.
+
+// function bgChanger() {
+//   if (window.scrollX > window.innerHeigth / 1.2) {
+//     console.log("scroll");
+//   } else {
+//     document.getElementsByClassName("about-me").backgroundColor = "#fff";
+//   }
+// }
+
+// bgChanger();
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > window.innerWidth / 1.2) {
+    document.querySelector(".project").style.backgroundColor = "#f3ec78";
+  } else if (window.scrollY < window.innerWidth / 1.9) {
+    document.querySelector(".project").style.backgroundColor = "#fff";
+  }
+});
