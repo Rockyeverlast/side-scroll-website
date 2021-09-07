@@ -1,11 +1,11 @@
 .header {
   position: relative;
   height: 100vh;
-  background-color: #000;
+  background-color: #0a0e50;
 
   &__main {
     position: absolute;
-    right: 48%; //45%
+    right: 45%; //45%
     top: 15%; //15
     width: min-content;
     text-align: left;
@@ -42,19 +42,26 @@
   &-clipped {
     position: absolute;
     width: 61%;
-    left: 40%;
+    left: 41%;
     height: inherit;
-    background-color: #fff;
+    background-color: #faf3b2;
     transform-origin: right;
 
-    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%);
+    // -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
+    // clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%);
+
+    -webkit-clip-path: polygon(33% 0, 100% 100, 100% 100%, 33% 100%, 20% 48%);
+    clip-path: polygon(33% 0, 100% 0, 100% 100%, 33% 100%, 20% 48%);
 
     .can-wrapper {
       position: absolute;
       display: flex;
       top: 65%;
-      left: 30%;
+      left: 28%;
+
+      .js {
+        width: 150px;
+      }
     }
     .can {
       margin-right: 30px;
@@ -67,29 +74,31 @@
   }
 
   &__textbox {
+    color: #0a0e50;
     position: absolute;
     top: 40%;
-    left: 63%;
+    left: 60%;
+    text-align: center;
     transform: translate(-50%, -50%);
 
     h2 {
       font-family: "rubik";
       width: max-content;
       font-size: 5rem;
-      font-weight: 500;
+      font-weight: 700;
       text-decoration: underline;
     }
 
     h3 {
-      font-family: "rubik";
-      font-weight: 500;
+      font-family: "raleway";
+      font-weight: 700;
       font-size: 4rem;
     }
 
     .name {
       font-family: "roboto";
       font-size: 6rem;
-      color: #151ef0;
+      color: #f70e63;
       font-weight: 600;
       text-decoration: underline;
     }
@@ -99,7 +108,7 @@
       font-size: 1.5rem;
       font-weight: 500;
       // padding: 2rem;
-      text-align: left;
+      text-align: center;
       margin-top: 1rem;
 
       .know-more {

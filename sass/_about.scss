@@ -1,0 +1,25 @@
+.about {
+  position: relative;
+  height: 100vh;
+  background: #faf3b2;
+  color: #0a0e50;
+
+  .heading3 {
+    font-weight: 700;
+    font-family: "raleway";
+    font-size: 10rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .para3 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-family: "lato";
+    // text-transform: uppercase;
+    margin-bottom: 5rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+}

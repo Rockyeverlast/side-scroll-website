@@ -14,7 +14,7 @@ gsap.to(sections, {
     scrub: 1,
     snap: 1 / (sections.length - 1),
     // base vertical scrolling on how wide the container is so it feels more natural.
-    end: () => "+=1500px" + document.querySelector(".container").offsetWidth,
+    end: () => "+=2400px" + document.querySelector(".container").offsetWidth,
   },
 });
 
@@ -26,13 +26,14 @@ anchors.forEach((anchor) => {
     e.preventDefault();
 
     const targetElem = document.querySelector(e.target.getAttribute("href"));
+    console.log(targetElem);
 
     if (targetElem) {
       const containerOffset = targetElem.offsetLeft;
 
       gsap.to(window, {
-        scrollTo: { y: containerOffset, autoKill: false },
-        duration: 1.5,
+        scrollTo: { y: containerOffset / 1.5, autoKill: true },
+        duration: 1,
       });
     } else {
       gsap.to(window, {
@@ -40,7 +41,7 @@ anchors.forEach((anchor) => {
           y: targetElem,
           autoKill: false,
         },
-        duration: 1.5,
+        duration: 1,
       });
     }
   });
@@ -60,6 +61,8 @@ document.querySelector(".closebtn").addEventListener("click", function (e) {
 
 ////////////////////#Header effect GSap
 
+// TweenLite.set(".header-clipped", { backfaceVisibility: "hidden" });
+
 gsap.fromTo(
   ".header-clipped",
   { scaleX: 0 },
@@ -73,6 +76,7 @@ gsap.fromTo(
 // );
 
 //# png float appear effect
+
 gsap.fromTo(
   ".html",
   { yPercent: 50, opacity: 0 },
@@ -177,9 +181,19 @@ function random(min, max) {
 // bgChanger();
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY > window.innerWidth / 1.2) {
-    document.querySelector(".project").style.backgroundColor = "#f3ec78";
-  } else if (window.scrollY < window.innerWidth / 1.9) {
-    document.querySelector(".project").style.backgroundColor = "#fff";
+  if (window.scrollY > window.innerWidth / 1.9) {
+    document.querySelector(".project").style.backgroundColor = "#0a0e50";
+  } else if (window.scrollY < window.innerWidth / 1.2) {
+    document.querySelector(".project").style.backgroundColor = "#fcfcfc";
+  }
+
+  if (window.scrollY > window.innerWidth / 1.9) {
+    document.querySelector(".heading2").style.color = "#faf3b2";
+    document.querySelector(".para2").style.color = "#faf3b2";
+  } else {
+    document.querySelector(".heading2").style.color = "#000";
+    document.querySelector(".para2").style.color = "#000";
   }
 });
+
+///*/#2F2FA2

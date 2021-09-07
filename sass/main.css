@@ -84,12 +84,12 @@ section {
 .header {
   position: relative;
   height: 100vh;
-  background-color: #000;
+  background-color: #0a0e50;
 }
 
 .header__main {
   position: absolute;
-  right: 48%;
+  right: 45%;
   top: 15%;
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -116,13 +116,13 @@ section {
 .header-clipped {
   position: absolute;
   width: 61%;
-  left: 40%;
+  left: 41%;
   height: inherit;
-  background-color: #fff;
+  background-color: #faf3b2;
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 20% 100%);
+  -webkit-clip-path: polygon(33% 0, 100% 100, 100% 100%, 33% 100%, 20% 48%);
+  clip-path: polygon(33% 0, 100% 0, 100% 100%, 33% 100%, 20% 48%);
 }
 
 .header-clipped .can-wrapper {
@@ -131,7 +131,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   top: 65%;
-  left: 30%;
+  left: 28%;
+}
+
+.header-clipped .can-wrapper .js {
+  width: 150px;
 }
 
 .header-clipped .can {
@@ -146,9 +150,11 @@ section {
 }
 
 .header__textbox {
+  color: #0a0e50;
   position: absolute;
   top: 40%;
-  left: 63%;
+  left: 60%;
+  text-align: center;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -159,20 +165,20 @@ section {
   width: -moz-max-content;
   width: max-content;
   font-size: 5rem;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: underline;
 }
 
 .header__textbox h3 {
-  font-family: "rubik";
-  font-weight: 500;
+  font-family: "raleway";
+  font-weight: 700;
   font-size: 4rem;
 }
 
 .header__textbox .name {
   font-family: "roboto";
   font-size: 6rem;
-  color: #151ef0;
+  color: #f70e63;
   font-weight: 600;
   text-decoration: underline;
 }
@@ -181,7 +187,7 @@ section {
   font-family: "quicksand";
   font-size: 1.5rem;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
   margin-top: 1rem;
 }
 
@@ -201,7 +207,39 @@ section {
 .project {
   position: relative;
   height: 100vh;
-  background: #fff;
+  background: #fcfcfc;
+  transition: background-color 1s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+}
+
+.project .heading2 {
+  color: #000;
+  font-weight: 700;
+  font-family: "raleway";
+  font-size: 10rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  transition: background-color 1.5s ease-out;
+  -webkit-transition: background-color 1.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out;
+}
+
+.project .para2 {
+  color: #000;
+  font-weight: 500;
+  font-size: 1.8rem;
+  font-family: "lato";
+  margin-bottom: 5rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  transition: background-color 1.5s ease-out;
+  -webkit-transition: background-color 1.5s ease-out;
+  -moz-transition: background-color 1.5s ease-out;
+}
+
+.project .layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,23 +249,24 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  transition: background-color 1s ease-out;
-  -webkit-transition: background-color 1s ease-out;
-  -moz-transition: background-color 1s ease-out;
+}
+
+.project .card:first-child {
+  margin-left: 3rem;
 }
 
 .project .card {
-  max-width: 35ch;
+  max-width: 25ch;
   padding: clamp(1.5rem, 20vh, 10rem) 0 0;
-  background-color: crimson;
+  background-color: #faf3b2;
   color: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.9);
-          box-shadow: rgba(0, 0, 0, 0.9);
+  -webkit-filter: drop-shadow(-4px 10px 5px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-4px 10px 5px rgba(50, 50, 0, 0.5));
   -webkit-transition: -webkit-transform ease 250ms;
   transition: -webkit-transform ease 250ms;
   transition: transform ease 250ms;
   transition: transform ease 250ms, -webkit-transform ease 250ms;
-  border-radius: 0.9rem;
+  border-radius: 1rem;
   overflow: hidden;
   margin-right: 4rem;
 }
@@ -321,6 +360,31 @@ section {
   transition: transform 500ms ease, -webkit-transform 500ms ease;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.about {
+  position: relative;
+  height: 100vh;
+  background: #faf3b2;
+  color: #0a0e50;
+}
+
+.about .heading3 {
+  font-weight: 700;
+  font-family: "raleway";
+  font-size: 10rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.about .para3 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  font-family: "lato";
+  margin-bottom: 5rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
 }
 
 @-webkit-keyframes text-clip {

@@ -1,24 +1,57 @@
 .project {
   position: relative;
   height: 100vh;
-  background: #fff;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #fcfcfc;
 
   transition: background-color 1s ease-out;
   -webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
 
+  .heading2 {
+    color: #000;
+    font-weight: 700;
+    font-family: "raleway";
+    font-size: 10rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    transition: background-color 1.5s ease-out;
+    -webkit-transition: background-color 1.5s ease-out;
+    -moz-transition: background-color 1.5s ease-out;
+  }
+
+  .para2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-family: "lato";
+    // text-transform: uppercase;
+    margin-bottom: 5rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    transition: background-color 1.5s ease-out;
+    -webkit-transition: background-color 1.5s ease-out;
+    -moz-transition: background-color 1.5s ease-out;
+  }
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card:first-child {
+    margin-left: 3rem;
+  }
+
   .card {
-    max-width: 35ch;
+    max-width: 25ch;
     padding: clamp(1.5rem, 20vh, 10rem) 0 0;
-    background-color: crimson;
+    background-color: #faf3b2;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.9);
+    filter: drop-shadow(-4px 10px 5px rgba(50, 50, 0, 0.5));
     transition: transform ease 250ms;
-    border-radius: 0.9rem;
+    border-radius: 1rem;
     overflow: hidden;
 
     margin-right: 4rem;
