@@ -21,10 +21,7 @@
 .navigation a {
   color: white;
   font-size: 2rem;
-}
-
-.navigation :hover {
-  color: #eb2f64;
+  font-weight: 600;
 }
 
 li {
@@ -32,6 +29,10 @@ li {
   list-style: none;
   margin-top: 5rem;
   display: block;
+}
+
+li :hover {
+  color: #eb2f64;
 }
 
 .menu-bar {
@@ -60,7 +61,7 @@ html {
 }
 
 body {
-  font-family: "montserrat", "poppins";
+  font-family: "montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
@@ -89,8 +90,8 @@ section {
 
 .header__main {
   position: absolute;
-  right: 45%;
-  top: 15%;
+  left: 49%;
+  top: 12%;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -101,7 +102,8 @@ section {
 .header__main h1 {
   font-family: "raleway", sans-serif;
   font-weight: 700;
-  font-size: 9.5rem;
+  font-size: 9.8rem;
+  padding: 1rem;
   background-image: -webkit-gradient(linear, left top, right top, from(#151ef0), color-stop(#fa0095), color-stop(#ff002f), color-stop(#fa9e00), to(#a8eb12));
   background-image: linear-gradient(to right, #151ef0, #fa0095, #ff002f, #fa9e00, #a8eb12);
   background-size: 100%;
@@ -115,14 +117,12 @@ section {
 
 .header-clipped {
   position: absolute;
-  width: 61%;
-  left: 41%;
+  width: 53%;
+  right: 48%;
   height: inherit;
-  background-color: #faf3b2;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-clip-path: polygon(33% 0, 100% 100, 100% 100%, 33% 100%, 20% 48%);
-  clip-path: polygon(33% 0, 100% 0, 100% 100%, 33% 100%, 20% 48%);
+  background-color: #c3004f;
+  -webkit-clip-path: polygon(0 0, 98% 0, 82% 100%, 0% 100%);
+  clip-path: polygon(0 0, 98% 0, 82% 100%, 0% 100%);
 }
 
 .header-clipped .can-wrapper {
@@ -130,8 +130,8 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 65%;
-  left: 28%;
+  top: 73%;
+  left: 10%;
 }
 
 .header-clipped .can-wrapper .js {
@@ -150,23 +150,26 @@ section {
 }
 
 .header__textbox {
-  color: #0a0e50;
+  color: #faf3b2;
   position: absolute;
+  margin: 2rem;
   top: 40%;
-  left: 60%;
-  text-align: center;
+  left: 48%;
+  text-align: left;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
 .header__textbox h2 {
-  font-family: "rubik";
+  color: #0a0e50;
+  font-family: "raleway";
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: 5rem;
+  font-size: 5.6rem;
   font-weight: 700;
   text-decoration: underline;
+  margin-bottom: 4rem;
 }
 
 .header__textbox h3 {
@@ -178,25 +181,23 @@ section {
 .header__textbox .name {
   font-family: "roboto";
   font-size: 6rem;
-  color: #f70e63;
+  color: #faf3b2;
   font-weight: 600;
   text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .header__textbox--sub {
+  color: #c3004f;
+  padding: 2rem;
   font-family: "quicksand";
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.header__textbox--sub .know-more {
-  background-color: yellowgreen;
+  width: 80%;
+  text-align: left;
   margin-top: 2rem;
-  text-align: center;
-  padding: 0.5rem;
-  font-size: 1.5rem;
+  background: #faf3b2;
+  border-radius: 1rem;
 }
 
 .header .menu {
@@ -207,7 +208,7 @@ section {
 .project {
   position: relative;
   height: 100vh;
-  background: #fcfcfc;
+  background: #0a0e50;
   transition: background-color 1s ease-out;
   -webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
@@ -217,7 +218,7 @@ section {
   color: #000;
   font-weight: 700;
   font-family: "raleway";
-  font-size: 10rem;
+  font-size: 6.5rem;
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
@@ -229,9 +230,9 @@ section {
 .project .para2 {
   color: #000;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: "lato";
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0.2rem;
   transition: background-color 1.5s ease-out;
@@ -249,6 +250,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
 }
 
 .project .card:first-child {
@@ -256,12 +260,13 @@ section {
 }
 
 .project .card {
-  max-width: 25ch;
-  padding: clamp(1.5rem, 20vh, 10rem) 0 0;
-  background-color: #faf3b2;
+  width: 20%;
+  height: 70%;
+  padding: clamp(1.5rem, 2vh, 5rem) 24 20;
+  background-color: #282828;
   color: white;
-  -webkit-filter: drop-shadow(-4px 10px 5px rgba(50, 50, 0, 0.5));
-          filter: drop-shadow(-4px 10px 5px rgba(50, 50, 0, 0.5));
+  -webkit-box-shadow: 25px 25px 50px #1b1c1b;
+          box-shadow: 25px 25px 50px #1b1c1b;
   -webkit-transition: -webkit-transform ease 250ms;
   transition: -webkit-transform ease 250ms;
   transition: transform ease 250ms;
@@ -367,6 +372,9 @@ section {
   height: 100vh;
   background: #faf3b2;
   color: #0a0e50;
+  transition: background-color 1s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
 }
 
 .about .heading3 {
@@ -385,6 +393,10 @@ section {
   margin-bottom: 5rem;
   text-align: center;
   letter-spacing: 0.2rem;
+}
+
+.about .skills {
+  padding: 3rem;
 }
 
 @-webkit-keyframes text-clip {

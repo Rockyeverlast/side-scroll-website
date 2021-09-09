@@ -63,11 +63,29 @@ document.querySelector(".closebtn").addEventListener("click", function (e) {
 
 // TweenLite.set(".header-clipped", { backfaceVisibility: "hidden" });
 
-gsap.fromTo(
-  ".header-clipped",
-  { scaleX: 0 },
-  { duration: 0.5, scaleX: 1, delay: 1.1 }
-);
+// gsap.fromTo(
+//   ".header-clipped",
+//   { scaleX: 0 },
+//   { duration: 0.5, scaleX: 1, delay: 1.1 }
+// );
+
+gsap.from(".header-clipped", 3, {
+  left: "-52%",
+  ease: Expo.easeInOut,
+  delay: 1.8,
+});
+
+gsap.from(".header__main", 3, {
+  left: "10%",
+  ease: Expo.easeInOut,
+  delay: 1.8,
+});
+
+// gsap.fromTo(
+//   ".header__main",
+//   { xPercent: 0, opacity: 1 },
+//   { duration: 0.65, delay: 3.1, opacity: 1, xPercent: 85 }
+// );
 
 // gsap.fromTo(
 //   "h2",
@@ -80,25 +98,25 @@ gsap.fromTo(
 gsap.fromTo(
   ".html",
   { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 1.5, opacity: 1, yPercent: -10 }
+  { duration: 0.5, delay: 4.5, opacity: 1, yPercent: -10 }
 );
 
 gsap.fromTo(
   ".css",
   { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 2, opacity: 1, yPercent: -10 }
+  { duration: 0.5, delay: 4.8, opacity: 1, yPercent: -10 }
 );
 
 gsap.fromTo(
   ".js",
   { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 2.4, opacity: 1, yPercent: -10 }
+  { duration: 0.5, delay: 5.2, opacity: 1, yPercent: -10 }
 );
 
 gsap.fromTo(
   ".sass",
   { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 2.8, opacity: 1, yPercent: -10 }
+  { duration: 0.5, delay: 5.5, opacity: 1, yPercent: -10 }
 );
 
 // gsap.fromTo(
@@ -125,9 +143,9 @@ const randomAngle = random(-10, 10);
 const cans = gsap.utils.toArray(".can > img");
 cans.forEach((can) => {
   gsap.set(can, {
-    x: randomX(-1),
-    y: randomX(1),
-    rotation: randomAngle(-1),
+    x: randomX(-2),
+    y: randomY(3),
+    rotation: randomAngle(-3),
   });
 
   moveX(can, 2);
@@ -170,29 +188,25 @@ function random(min, max) {
 
 //# page Bg color transition.
 
-// function bgChanger() {
-//   if (window.scrollX > window.innerHeigth / 1.2) {
-//     console.log("scroll");
-//   } else {
-//     document.getElementsByClassName("about-me").backgroundColor = "#fff";
-//   }
-// }
-
-// bgChanger();
-
 window.addEventListener("scroll", function () {
   if (window.scrollY > window.innerWidth / 1.9) {
-    document.querySelector(".project").style.backgroundColor = "#0a0e50";
+    document.querySelector(".project").style.backgroundColor = "#c3004f";
   } else if (window.scrollY < window.innerWidth / 1.2) {
-    document.querySelector(".project").style.backgroundColor = "#fcfcfc";
+    document.querySelector(".project").style.backgroundColor = "#0a0e50";
   }
 
   if (window.scrollY > window.innerWidth / 1.9) {
     document.querySelector(".heading2").style.color = "#faf3b2";
     document.querySelector(".para2").style.color = "#faf3b2";
   } else {
-    document.querySelector(".heading2").style.color = "#000";
-    document.querySelector(".para2").style.color = "#000";
+    document.querySelector(".heading2").style.color = "#fff";
+    document.querySelector(".para2").style.color = "#fff";
+  }
+
+  if (window.scrollY > window.innerWidth) {
+    document.querySelector(".about").style.backgroundColor = "#faf3b2";
+  } else if (window.scrollY < window.innerWidth) {
+    document.querySelector(".about").style.backgroundColor = "#c3004f";
   }
 });
 
