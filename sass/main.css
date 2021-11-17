@@ -90,8 +90,8 @@ section {
 
 .header__main {
   position: absolute;
-  left: 49%;
-  top: 12%;
+  left: 48.5%;
+  top: 13%;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -122,7 +122,7 @@ section {
   height: inherit;
   background-color: #c3004f;
   -webkit-clip-path: polygon(0 0, 98% 0, 82% 100%, 0% 100%);
-  clip-path: polygon(0 0, 98% 0, 82% 100%, 0% 100%);
+  clip-path: polygon(0 0, 95% 0, 82% 100%, 0% 100%);
 }
 
 .header-clipped .can-wrapper {
@@ -130,16 +130,25 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 73%;
-  left: 10%;
+  top: 78%;
+  left: 19%;
 }
 
-.header-clipped .can-wrapper .js {
-  width: 150px;
+.header-clipped .can-wrapper2 {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 6%;
+  left: 11%;
+}
+
+.header-clipped .can-wrapper2 .js {
+  width: 140px;
 }
 
 .header-clipped .can {
-  margin-right: 30px;
+  margin-right: 10.5rem;
 }
 
 .header-clipped .can > img {
@@ -153,8 +162,9 @@ section {
   color: #faf3b2;
   position: absolute;
   margin: 2rem;
-  top: 40%;
-  left: 48%;
+  top: 45%;
+  left: 47%;
+  letter-spacing: 0.2rem;
   text-align: left;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -166,16 +176,16 @@ section {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: 5.6rem;
+  font-size: 5rem;
   font-weight: 700;
   text-decoration: underline;
-  margin-bottom: 4rem;
+  margin-bottom: 6.5rem;
 }
 
 .header__textbox h3 {
   font-family: "raleway";
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .header__textbox .name {
@@ -190,9 +200,9 @@ section {
 .header__textbox--sub {
   color: #c3004f;
   padding: 2rem;
-  font-family: "quicksand";
+  font-family: "montserrat";
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 700;
   width: 80%;
   text-align: left;
   margin-top: 2rem;
@@ -252,7 +262,7 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2em;
+  gap: 2.8em;
 }
 
 .project .card:first-child {
@@ -262,8 +272,6 @@ section {
 .project .card {
   width: 20%;
   height: 70%;
-  padding: clamp(1.5rem, 2vh, 5rem) 24 20;
-  background-color: #282828;
   color: white;
   -webkit-box-shadow: 25px 25px 50px #1b1c1b;
           box-shadow: 25px 25px 50px #1b1c1b;
@@ -273,7 +281,7 @@ section {
   transition: transform ease 250ms, -webkit-transform ease 250ms;
   border-radius: 1rem;
   overflow: hidden;
-  margin-right: 4rem;
+  margin: 0rem 4rem;
 }
 
 .project .card-body {
@@ -289,7 +297,7 @@ section {
 }
 
 .project .card-body p {
-  color: rgba(255, 255, 255, 0.76);
+  color: #42f584;
   margin-bottom: 1.25em;
   margin-top: 0.5em;
 }
@@ -367,7 +375,26 @@ section {
           transform: scaleX(1);
 }
 
+.project .mapout-pic {
+  width: 2rem;
+  height: 1.5vh;
+}
+
+.card--2 {
+  background-image: url("../images/MapoutScreenshot_1.png");
+  background-size: cover;
+}
+
 .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   height: 100vh;
   background: #faf3b2;
@@ -396,7 +423,55 @@ section {
 }
 
 .about .skills {
+  background-color: #c3004f;
+  border-radius: 1rem;
+  color: #faf3b2;
   padding: 3rem;
+  margin-left: 8rem;
+  width: 50%;
+}
+
+.about .skills h2 {
+  margin-bottom: 1rem;
+}
+
+.about .skills2 {
+  position: absolute;
+  background-color: #c3004f;
+  border-radius: 3rem;
+  color: #faf3b2;
+  top: 30%;
+  right: 6%;
+  padding: 3rem;
+  margin-left: 5rem;
+  width: 35%;
+  height: 65%;
+}
+
+.about .skills2 h2 {
+  margin-bottom: 1rem;
+}
+
+.about .skills2 .dp {
+  width: 200px;
+  height: 200px;
+  float: left;
+  shape-outside: circle(51% at 50% 102px);
+  padding-right: 0.5rem;
+}
+
+.about .skills3 {
+  background-color: #c3004f;
+  border-radius: 1rem;
+  color: #faf3b2;
+  padding: 3rem;
+  margin-left: 8rem;
+  margin-top: 6rem;
+  width: 50%;
+}
+
+.about .skills3 h2 {
+  margin-bottom: 1rem;
 }
 
 @-webkit-keyframes text-clip {

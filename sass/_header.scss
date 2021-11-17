@@ -5,8 +5,8 @@
 
   &__main {
     position: absolute;
-    left: 49%; //45%
-    top: 12%; //15
+    left: 48.5%; //45%
+    top: 13%; //15
     width: min-content;
     text-align: left;
     overflow: hidden;
@@ -49,7 +49,7 @@
     // transform-origin: left;
 
     -webkit-clip-path: polygon(0 0, 98% 0, 82% 100%, 0% 100%);
-    clip-path: polygon(0 0, 98% 0, 82% 100%, 0% 100%);
+    clip-path: polygon(0 0, 95% 0, 82% 100%, 0% 100%);
 
     // -webkit-clip-path: polygon(33% 0, 100% 100, 100% 100%, 33% 100%, 20% 48%);
     // clip-path: polygon(33% 0, 100% 0, 100% 100%, 33% 100%, 20% 48%);
@@ -57,15 +57,25 @@
     .can-wrapper {
       position: absolute;
       display: flex;
-      top: 73%;
-      left: 10%;
+      top: 78%;
+      left: 19%;
+      // justify-content: space-evenly;
+    }
+
+    .can-wrapper2 {
+      position: absolute;
+      display: flex;
+      top: 6%;
+      left: 11%;
+      // justify-content: space-evenly;
 
       .js {
-        width: 150px;
+        width: 140px;
       }
     }
+
     .can {
-      margin-right: 30px;
+      margin-right: 10.5rem;
     }
     .can > img {
       width: 120px;
@@ -78,8 +88,9 @@
     color: #faf3b2;
     position: absolute;
     margin: 2rem;
-    top: 40%;
-    left: 48%;
+    top: 45%;
+    left: 47%;
+    letter-spacing: 0.2rem;
     text-align: left;
     transform: translate(-50%, -50%);
 
@@ -87,16 +98,16 @@
       color: #0a0e50;
       font-family: "raleway";
       width: max-content;
-      font-size: 5.6rem;
+      font-size: 5rem;
       font-weight: 700;
       text-decoration: underline;
-      margin-bottom: 4rem;
+      margin-bottom: 6.5rem;
     }
 
     h3 {
       font-family: "raleway";
       font-weight: 700;
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
 
     .name {
@@ -111,9 +122,9 @@
     &--sub {
       color: #c3004f;
       padding: 2rem;
-      font-family: "quicksand";
+      font-family: "montserrat";
       font-size: 1.6rem;
-      font-weight: 500;
+      font-weight: 700;
       width: 80%;
       text-align: left;
       margin-top: 2rem;

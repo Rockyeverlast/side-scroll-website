@@ -1,4 +1,7 @@
 .about {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   position: relative;
   height: 100vh;
   background: #faf3b2;
@@ -28,6 +31,54 @@
   }
 
   .skills {
+    background-color: #c3004f;
+    border-radius: 1rem;
+    color: #faf3b2;
     padding: 3rem;
+    margin-left: 8rem;
+    width: 50%;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .skills2 {
+    position: absolute;
+    background-color: #c3004f;
+    border-radius: 3rem;
+    color: #faf3b2;
+    top: 30%;
+    right: 6%;
+    padding: 3rem;
+    margin-left: 5rem;
+    width: 35%;
+    height: 65%;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .dp {
+      width: 200px;
+      height: 200px;
+      float: left;
+      shape-outside: circle(51% at 50% 102px);
+      padding-right: 0.5rem;
+    }
+  }
+
+  .skills3 {
+    background-color: #c3004f;
+    border-radius: 1rem;
+    color: #faf3b2;
+    padding: 3rem;
+    margin-left: 8rem;
+    margin-top: 6rem;
+    width: 50%;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
   }
 }

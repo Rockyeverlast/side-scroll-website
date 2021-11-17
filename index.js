@@ -1,4 +1,5 @@
-///Gsap scrolltrigger
+///--Gsap scrolltrigger
+
 gsap.defaults({ ease: "none" });
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -47,7 +48,7 @@ anchors.forEach((anchor) => {
   });
 });
 
-////////////////////////////# Menu toggle
+////////////////////////////-- Menu toggle
 
 document.querySelector(".menu").addEventListener("click", function (e) {
   e.preventDefault();
@@ -59,7 +60,7 @@ document.querySelector(".closebtn").addEventListener("click", function (e) {
   document.querySelector(".navigation").style.left = "-24rem";
 });
 
-////////////////////#Header effect GSap
+////////////////////----Header effect GSap
 
 // TweenLite.set(".header-clipped", { backfaceVisibility: "hidden" });
 
@@ -96,27 +97,36 @@ gsap.from(".header__main", 3, {
 //# png float appear effect
 
 gsap.fromTo(
-  ".html",
-  { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 4.5, opacity: 1, yPercent: -10 }
+  ".css",
+  {
+    xPercent: 30,
+    opacity: 1,
+  },
+  { duration: 0.5, delay: 4.5, opacity: 1, xPercent: 10 }
 );
 
 gsap.fromTo(
-  ".css",
-  { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 4.8, opacity: 1, yPercent: -10 }
+  ".html",
+  { xPercent: 30, opacity: 1 },
+  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
 );
 
 gsap.fromTo(
   ".js",
-  { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 5.2, opacity: 1, yPercent: -10 }
+  { xPercent: 30, opacity: 1 },
+  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
 );
 
 gsap.fromTo(
   ".sass",
-  { yPercent: 50, opacity: 0 },
-  { duration: 0.5, delay: 5.5, opacity: 1, yPercent: -10 }
+  { xPercent: 30, opacity: 1 },
+  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
+);
+
+gsap.fromTo(
+  ".bs",
+  { xPercent: 30 },
+  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
 );
 
 // gsap.fromTo(
@@ -131,7 +141,7 @@ gsap.fromTo(
 //   { duration: 0.5, delay: 2.2, opacity: 1, yPercent: 5 }
 // );
 
-////////////////////////////#Gsap png float animation
+////////////////////////////--Gsap png float animation
 
 const randomX = random(1, 10);
 const randomY = random(1, 10);
@@ -183,10 +193,25 @@ function moveY(target, direction) {
 
 function random(min, max) {
   const delta = max - min;
+
+  // gsap.fromTo(
+  //   ".bs",
+  //   { xPercent: 800 },
+  //   { duration: 8.5, delay: 4.5, opacity: 1, xPercent: -10 }
+  // );
+
+  // gsap.fromTo(
+  //   ".css",
+  //   {
+  //     xPercent: 600,
+  //   },
+  //   { duration: 8.5, delay: 4.8, opacity: 1, xPercent: 10, xPercent: -10 }
+  // );
+
   return (direction = 1) => (min + delta * Math.random()) * direction;
 }
 
-//# page Bg color transition.
+//////////////////////////////////-- page Bg color transition.
 
 window.addEventListener("scroll", function () {
   if (window.scrollY > window.innerWidth / 1.9) {
@@ -203,9 +228,9 @@ window.addEventListener("scroll", function () {
     document.querySelector(".para2").style.color = "#fff";
   }
 
-  if (window.scrollY > window.innerWidth) {
+  if (window.scrollY > window.innerWidth / 0.75) {
     document.querySelector(".about").style.backgroundColor = "#faf3b2";
-  } else if (window.scrollY < window.innerWidth) {
+  } else if (window.scrollY < window.innerWidth / 0.75) {
     document.querySelector(".about").style.backgroundColor = "#c3004f";
   }
 });

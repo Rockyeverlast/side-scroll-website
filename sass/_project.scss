@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2em;
+    gap: 2.8em;
     // flex-direction: column;
   }
 
@@ -51,15 +51,14 @@
     width: 20%;
     height: 70%;
     // max-width: 25ch;
-    padding: clamp(1.5rem, 2vh, 5rem) 24 20;
-    background-color: #282828;
+    // padding: clamp(1.5rem, 2vh, 5rem) 24 20;
+    // background-color: transparent;
     color: white;
     box-shadow: 25px 25px 50px #1b1c1b;
     transition: transform ease 250ms;
     border-radius: 1rem;
     overflow: hidden;
-
-    margin-right: 4rem;
+    margin: 0rem 4rem;
 
     &-body {
       padding: 2rem;
@@ -73,7 +72,7 @@
       );
 
       p {
-        color: rgba(255, 255, 255, 0.76);
+        color: hsl(142, 90%, 61%);
         margin-bottom: 1.25em;
         margin-top: 0.5em;
       }
@@ -137,6 +136,16 @@
     transition: transform 500ms ease;
     transform: scaleX(1);
   }
+
+  .mapout-pic {
+    width: 2rem;
+    height: 1.5vh;
+  }
+}
+
+.card--2 {
+  background-image: url("../images/MapoutScreenshot_1.png");
+  background-size: cover;
 }
 
 // :hover {
