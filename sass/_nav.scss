@@ -1,6 +1,6 @@
 .navigation {
   position: fixed;
-  width: 17rem;
+  width: 20rem;
   left: -24rem;
   height: 100%;
   text-align: center;
@@ -20,6 +20,11 @@
     color: white;
     font-size: 2rem;
     font-weight: 600;
+  }
+
+  .logo {
+    width: 20rem;
+    height: 20rem;
   }
 }
 
