@@ -96,7 +96,7 @@ section {
 
 .header__main {
   position: absolute;
-  left: 48.5%;
+  left: 48%;
   top: 13%;
   width: -webkit-min-content;
   width: -moz-min-content;
@@ -169,11 +169,18 @@ section {
   position: absolute;
   margin: 2rem;
   top: 45%;
-  left: 47%;
+  left: 45%;
   letter-spacing: 0.2rem;
   text-align: left;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.header__textbox img {
+  width: 500px;
+  -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5), 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10%;
 }
 
 .header__textbox h2 {
@@ -182,7 +189,7 @@ section {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  font-size: 5rem;
+  font-size: 4.2rem;
   font-weight: 700;
   text-decoration: underline;
   margin-bottom: 6.5rem;
@@ -206,8 +213,8 @@ section {
 .header__textbox--sub {
   color: #c3004f;
   padding: 2rem;
-  font-family: "montserrat";
-  font-size: 1.6rem;
+  font-family: "raleway";
+  font-size: 2.2rem;
   font-weight: 700;
   width: 80%;
   text-align: left;
@@ -225,9 +232,26 @@ section {
   position: relative;
   height: 100vh;
   background: #0a0e50;
+  outline: 3px solid #0a0e50;
   transition: background-color 1s ease-out;
   -webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
+}
+
+.project .img {
+  border-radius: 15px;
+  padding: 0 2rem;
+  margin: 3rem 5rem 5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #0a0e50;
+  color: aliceblue;
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: "roboto";
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .project .heading2 {
@@ -235,6 +259,7 @@ section {
   font-weight: 700;
   font-family: "raleway";
   font-size: 6.5rem;
+  padding-top: 5rem;
   text-transform: uppercase;
   text-align: center;
   text-decoration: underline;
@@ -405,6 +430,7 @@ section {
   height: 100vh;
   background: #faf3b2;
   color: #0a0e50;
+  outline: 3px solid #c3004f;
   transition: background-color 1s ease-out;
   -webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
@@ -447,23 +473,21 @@ section {
   border-radius: 3rem;
   color: #faf3b2;
   top: 30%;
-  right: 6%;
+  right: 5%;
   padding: 3rem;
   margin-left: 5rem;
-  width: 35%;
+  width: 90%;
   height: 65%;
 }
 
-.about .skills2 h2 {
+.about .skills2 h1 {
+  font-size: 5rem;
   margin-bottom: 1rem;
 }
 
-.about .skills2 .dp {
-  width: 200px;
-  height: 200px;
-  float: left;
-  shape-outside: circle(51% at 50% 102px);
-  padding-right: 0.5rem;
+.about .skills2 .details {
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 .about .skills3 {

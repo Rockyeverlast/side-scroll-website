@@ -8,11 +8,26 @@
   -webkit-transition: background-color 1s ease-out;
   -moz-transition: background-color 1s ease-out;
 
+  .img {
+    border-radius: 15px;
+    padding: 0 2rem;
+    margin: 3rem 5rem 5rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: #0a0e50;
+    color: aliceblue;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "roboto";
+    width: fit-content;
+  }
+
   .heading2 {
     color: #000;
     font-weight: 700;
     font-family: "raleway";
     font-size: 6.5rem;
+    padding-top: 5rem;
     text-transform: uppercase;
     text-align: center;
     text-decoration: underline;

@@ -94,123 +94,6 @@ gsap.from(".header__main", 3, {
 //   { duration: 1, scaleX: 1, delay: 1.5, x: 0, opacity: 1 }
 // );
 
-//# png float appear effect
-
-gsap.fromTo(
-  ".css",
-  {
-    xPercent: 30,
-    opacity: 1,
-  },
-  { duration: 0.5, delay: 4.5, opacity: 1, xPercent: 10 }
-);
-
-gsap.fromTo(
-  ".html",
-  { xPercent: 30, opacity: 1 },
-  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
-);
-
-gsap.fromTo(
-  ".js",
-  { xPercent: 30, opacity: 1 },
-  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
-);
-
-gsap.fromTo(
-  ".sass",
-  { xPercent: 30, opacity: 1 },
-  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
-);
-
-gsap.fromTo(
-  ".bs",
-  { xPercent: 30 },
-  { duration: 0.9, delay: 4.5, opacity: 1, xPercent: 10 }
-);
-
-// gsap.fromTo(
-//   ".header__textbox",
-//   { yPercent: 40, opacity: 0 },
-//   { duration: 0.5, delay: 1.5, opacity: 1, yPercent: -55 }
-// );
-
-// gsap.fromTo(
-//   ".header__textbox--sub",
-//   { yPercent: 40, opacity: 0 },
-//   { duration: 0.5, delay: 2.2, opacity: 1, yPercent: 5 }
-// );
-
-////////////////////////////--Gsap png float animation
-
-const randomX = random(1, 10);
-const randomY = random(1, 10);
-const randomDelay = random(0, 1);
-const randomTime = random(3, 5);
-const randomTime2 = random(5, 10);
-const randomAngle = random(-10, 10);
-
-const cans = gsap.utils.toArray(".can > img");
-cans.forEach((can) => {
-  gsap.set(can, {
-    x: randomX(-2),
-    y: randomY(3),
-    rotation: randomAngle(-3),
-  });
-
-  moveX(can, 2);
-  moveY(can, -2);
-  rotate(can, 1);
-});
-
-function rotate(target, direction) {
-  gsap.to(target, randomTime2(), {
-    rotation: randomAngle(direction),
-    // delay: randomDelay(),
-    ease: Sine.easeInOut,
-    onComplete: rotate,
-    onCompleteParams: [target, direction * -1],
-  });
-}
-
-function moveX(target, direction) {
-  gsap.to(target, randomTime(), {
-    x: randomX(direction),
-    ease: Sine.easeInOut,
-    onComplete: moveX,
-    onCompleteParams: [target, direction * -1],
-  });
-}
-
-function moveY(target, direction) {
-  gsap.to(target, randomTime(), {
-    y: randomY(direction),
-    ease: Sine.easeInOut,
-    onComplete: moveY,
-    onCompleteParams: [target, direction * -1],
-  });
-}
-
-function random(min, max) {
-  const delta = max - min;
-
-  // gsap.fromTo(
-  //   ".bs",
-  //   { xPercent: 800 },
-  //   { duration: 8.5, delay: 4.5, opacity: 1, xPercent: -10 }
-  // );
-
-  // gsap.fromTo(
-  //   ".css",
-  //   {
-  //     xPercent: 600,
-  //   },
-  //   { duration: 8.5, delay: 4.8, opacity: 1, xPercent: 10, xPercent: -10 }
-  // );
-
-  return (direction = 1) => (min + delta * Math.random()) * direction;
-}
-
 //////////////////////////////////-- page Bg color transition.
 
 window.addEventListener("scroll", function () {
@@ -222,13 +105,14 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY > window.innerWidth / 1.9) {
     document.querySelector(".heading2").style.color = "#faf3b2";
-    document.querySelector(".para2").style.color = "#faf3b2";
+    // document.querySelector(".para2").style.color = "#faf3b2";
   } else {
     document.querySelector(".heading2").style.color = "#fff";
-    document.querySelector(".para2").style.color = "#fff";
+    // document.querySelector(".para2").style.color = "#fff";
   }
 
   if (window.scrollY > window.innerWidth / 0.75) {
+    console.log("Yes");
     document.querySelector(".about").style.backgroundColor = "#faf3b2";
   } else if (window.scrollY < window.innerWidth / 0.75) {
     document.querySelector(".about").style.backgroundColor = "#c3004f";
