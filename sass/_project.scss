@@ -1,0 +1,201 @@
+.project {
+  position: relative;
+  height: 100vh;
+  background: #0a0e50;
+  outline: 3px solid #0a0e50;
+
+  transition: background-color 1s ease-out;
+  -webkit-transition: background-color 1s ease-out;
+  -moz-transition: background-color 1s ease-out;
+
+  .img {
+    border-radius: 15px;
+    padding: 0 2rem;
+    margin: 3rem 5rem 5rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: #0a0e50;
+    color: aliceblue;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: "roboto";
+    width: fit-content;
+  }
+
+  .heading2 {
+    color: #000;
+    font-weight: 700;
+    font-family: "raleway";
+    font-size: 6.5rem;
+    padding-top: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    transition: background-color 1.5s ease-out;
+    -webkit-transition: background-color 1.5s ease-out;
+    -moz-transition: background-color 1.5s ease-out;
+  }
+
+  .para2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.6rem;
+    font-family: "lato";
+    // text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    transition: background-color 1.5s ease-out;
+    -webkit-transition: background-color 1.5s ease-out;
+    -moz-transition: background-color 1.5s ease-out;
+  }
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.8em;
+    // flex-direction: column;
+  }
+
+  .card:first-child {
+    margin-left: 3rem;
+  }
+
+  .card {
+    width: 20%;
+    height: 70%;
+    // max-width: 25ch;
+    // padding: clamp(1.5rem, 2vh, 5rem) 24 20;
+    // background-color: transparent;
+    color: white;
+    box-shadow: 25px 25px 50px #1b1c1b;
+    transition: transform ease 250ms;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 0rem 4rem;
+
+    &-body {
+      padding: 2rem;
+      transform: translateY(65%);
+      transition: transform 400ms ease;
+
+      background: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.25) 15%,
+        rgba(0, 0, 0, 1)
+      );
+
+      p {
+        color: hsl(142, 90%, 61%);
+        margin-bottom: 1.25em;
+        margin-top: 0.5em;
+      }
+
+      > *:not(.card-title) {
+        opacity: 0;
+        transition: opacity 1200ms linear 200ms;
+      }
+
+      .button {
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        background: hsl(142, 90%, 61%);
+        padding: 0.5em 1.25em;
+        border-radius: 0.25rem;
+      }
+
+      .button:hover {
+        background: white;
+      }
+    }
+
+    &-title {
+      position: relative;
+      width: max-content;
+    }
+
+    &-title::after {
+      content: "";
+      position: absolute;
+      left: -1.5rem;
+      top: 100%;
+      height: 3px;
+      width: calc(100% + 1.5rem);
+      background: hsl(142, 90%, 61%);
+      transform: scaleX(0);
+      transition: transform 200ms ease;
+      transform-origin: left;
+    }
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card:hover .card-body > *:not(.card-title) {
+    opacity: 1;
+  }
+
+  .card:hover .card-body {
+    transform: translateY(0);
+    transition-delay: 500ms;
+  }
+
+  .card:hover .card-title::after {
+    transition: transform 500ms ease;
+    transform: scaleX(1);
+  }
+
+  .mapout-pic {
+    width: 2rem;
+    height: 1.5vh;
+  }
+}
+
+.card--2 {
+  background-image: url("../images/MapoutScreenshot_1.png");
+  background-size: cover;
+}
+
+// :hover {
+//   transform: scale(1.05);
+
+//   > *:not(.card-title) {
+//     opacity: 1;
+//   }
+
+//   .card-title::after {
+//     transition: transform 500ms ease;
+//     transform: scaleX(1);
+//   }
+
+//   .card-body {
+//     transform: translateY(0);
+//     transition-delay: 500ms;
+//   }
+
+//   .card-title::after {
+//     content: "";
+//     position: absolute;
+//     left: -1.5rem;
+//     top: 100%;
+//     height: 3px;
+//     width: calc(100% + 1.5rem);
+//     background: hsl(142, 90%, 61%);
+//     transform: scaleX(0);
+//     transition: transform 200ms ease;
+//     transform-origin: left;
+//   }
+// }
+
+// &-title {
+//   position: relative;
+//   width: max-content;
+// }

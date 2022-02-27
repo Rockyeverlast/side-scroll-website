@@ -1,6 +1,6 @@
 .navigation {
   position: fixed;
-  width: 17rem;
+  width: 20rem;
   left: -24rem;
   height: 100%;
   text-align: center;
@@ -19,10 +19,12 @@
   a {
     color: white;
     font-size: 2rem;
+    font-weight: 600;
   }
 
-  :hover {
-    color: #eb2f64;
+  .logo {
+    width: 20rem;
+    height: 20rem;
   }
 }
 
@@ -31,14 +33,19 @@ li {
   list-style: none;
   margin-top: 5rem;
   display: block;
+
+  :hover {
+    color: #eb2f64;
+  }
 }
 
 .menu-bar {
   position: absolute;
-  color: #1e1e1e;
+  color: #05fc95;
   top: 0; /* Stay at the top */
   left: 0;
   z-index: 4;
-  padding: 3rem 0 0 2rem;
-  font-size: 4rem;
+  margin-left: 2rem;
+  font-size: 5rem;
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
 }
